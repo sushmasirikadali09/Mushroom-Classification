@@ -35,19 +35,19 @@ st.info(
 def load_files():
 
     model = pickle.load(
-        open("archive (3)/mushroom_model_rf.pkl", "rb")
+        open("mushroom_model_rf.pkl", "rb")
     )
 
     scaler = pickle.load(
-        open("archive (3)/mushroom_scaler.pkl", "rb")
+        open("mushroom_scaler.pkl", "rb")
     )
 
     label_encoder = pickle.load(
-        open("archive (3)/mushroom_label_encoder.pkl", "rb")
+        open("mushroom_label_encoder.pkl", "rb")
     )
 
     data = pd.read_csv(
-        "archive (3)/mushrooms.csv"
+        pd.read_csv("mushrooms.csv")
     )
 
     return model, scaler, label_encoder, data
